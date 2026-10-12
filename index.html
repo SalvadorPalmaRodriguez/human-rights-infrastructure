@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>enola-cli-lite — Tu infraestructura. Tus reglas. Nadie mirando.</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Cold open -->
+    <div class="cold-open" id="coldOpen" role="button" tabindex="0" aria-label="Comenzar">
+        <p class="cold-line">En junio de 2025, Irán apagó internet durante días.</p>
+        <p class="cold-line cold-line-2">No fue una avería. Fue una decisión.</p>
+        <p class="cold-source">Tor Project, «Staying ahead of censors», 2025 (D12)</p>
+        <p class="cold-hint">Desplázate o pulsa para comenzar ↓</p>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Sidebar navigation -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">enola-cli-lite</div>
+            <div class="sidebar-subtitle">Tu infraestructura. Tus reglas.</div>
+        </div>
+        <ul class="sidebar-nav">
+            <li><a href="#portada" class="nav-link active" data-section="portada">Portada</a></li>
+            <li><a href="#problema" class="nav-link" data-section="problema">00 · El problema</a></li>
+            <li><a href="#paranoia" class="nav-link" data-section="paranoia">01 · No es paranoia</a></li>
+            <li><a href="#frontera" class="nav-link" data-section="frontera">02 · Datos sin frontera</a></li>
+            <li><a href="#mercado" class="nav-link" data-section="mercado">03 · Cuando el mercado manda</a></li>
+            <li><a href="#que-es" class="nav-link" data-section="que-es">04 · Qué es enola-cli</a></li>
+            <li><a href="#promesa" class="nav-link" data-section="promesa">05 · La promesa</a></li>
+            <li><a href="#perfiles" class="nav-link" data-section="perfiles">06 · Para quién</a></li>
+            <li><a href="#publicar" class="nav-link" data-section="publicar">07 · Publicar</a></li>
+            <li><a href="#compartir" class="nav-link" data-section="compartir">08 · Compartir</a></li>
+            <li><a href="#capaz" class="nav-link" data-section="capaz">09 · De qué es capaz</a></li>
+            <li><a href="#limites" class="nav-link" data-section="limites">10 · Lo que no hace</a></li>
+            <li><a href="#empieza" class="nav-link" data-section="empieza">11 · Empieza hoy</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <button class="btn-present" id="btnPresent" title="Modo presentación (F)">Presentar</button>
+            <div class="lang-switch"><a href="index.html" class="lang-active">ES</a> · <a href="index-en.html">EN</a></div>
+        </div>
+    </nav>
+
+    <!-- Mobile menu toggle -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+    </button>
+
+    <!-- Main content -->
+    <main class="content" id="content">
+
+        <!-- Portada -->
+        <section class="section section-hero" id="portada">
+            <div class="hero-overlay"></div>
+            <div class="hero-content reveal">
+                <p class="hero-eyebrow">enola-cli-lite</p>
+                <h1 class="hero-title">Tu infraestructura.<br>Tus reglas.<br><span class="hero-year">Nadie mirando.</span></h1>
+                <p class="hero-tagline">enola-cli convierte un PC con Linux en tu propio rincón de internet: tu web, tu blog, tus archivos. Sin servidores ajenos, sin puertos abiertos, sin una IP que te delate.</p>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="hero-stat-number" data-count="0">0</span>
+                        <span class="hero-stat-label">puertos abiertos a internet</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number" data-count="6">0</span>
+                        <span class="hero-stat-label">plataformas de publicación, un comando cada una</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number" data-count="1000000" data-prefix="≈">≈0</span>
+                        <span class="hero-stat-label">direcciones .onion activas al día (Tor Metrics, 2025 · D4)</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number" data-count="15">0</span>
+                        <span class="hero-stat-label">años consecutivos de declive de la libertad en la red (D1)</span>
+                    </div>
+                </div>
+                <div class="hero-scroll-hint">
+                    <span>Desplázate para comenzar</span>
+                    <div class="scroll-arrow"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 00 · El problema -->
+        <section class="section" id="problema">
+            <div class="section-header reveal">
+                <span class="section-number">00</span>
+                <h2 class="section-title">El problema</h2>
+                <p class="section-intro">Internet ya no es la plaza pública que fue. Y no es una sensación: es el sumario.</p>
+            </div>
+            <div class="pillars-grid">
+                <div class="pillar-card reveal" style="--delay: 0s">
+                    <div class="pillar-icon">01</div>
+                    <h3>La libertad en la red lleva 15 años cayendo</h3>
+                    <p>En 2025 empeoró en 27 países y mejoró solo en 17. El informe cubre al 87&nbsp;% de los internautas del mundo.</p>
+                    <p class="source">Freedom House, 2025 (D1)</p>
+                </div>
+                <div class="pillar-card reveal" style="--delay: 0.1s">
+                    <div class="pillar-icon">02</div>
+                    <h3>Más de la mitad de la humanidad vive sin prensa libre</h3>
+                    <p>4.250 millones de personas en 42 países con situación «muy grave» — por primera vez, la media global es «difícil».</p>
+                    <p class="source">RSF, Índice 2025 (D3)</p>
+                </div>
+                <div class="pillar-card reveal" style="--delay: 0.2s">
+                    <div class="pillar-icon">03</div>
+                    <h3>Los apagones ya son una herramienta de gobierno</h3>
+                    <p>Irán desconectó internet en junio de 2025; Rusia bloquea webs por listas blancas; China bloquea hasta los puentes de Tor.</p>
+                    <p class="source">Tor Project / HRW, 2025 (D12)</p>
+                </div>
+                <div class="pillar-card reveal" style="--delay: 0.3s">
+                    <div class="pillar-icon">04</div>
+                    <h3>Tu operador te dio una casa sin timbre</h3>
+                    <p>Los grandes proveedores ponen a sus clientes tras CGNAT: no puedes abrir un solo puerto. Publicar desde casa, imposible por la vía clásica.</p>
+                    <p class="source">T-Mobile, Verizon, AT&amp;T (D8)</p>
+                </div>
+                <div class="pillar-card reveal" style="--delay: 0.4s">
+                    <div class="pillar-icon">05</div>
+                    <h3>Publicar cuesta dinero — o cuesta tus datos</h3>
+                    <p>Un servidor alquilado son 4–6&nbsp;€ al mes, para siempre. El hosting «gratis» se paga con tu información y tu audiencia en manos ajenas.</p>
+                </div>
+                <div class="pillar-card reveal" style="--delay: 0.5s">
+                    <div class="pillar-icon">06</div>
+                    <h3>Todo lo que subes pasa por un tercero</h3>
+                    <p>Cada foto, documento o mensaje que compartes vive en el ordenador de otra empresa, bajo las leyes de otro país, legible por gente que no conoces.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 01 · No es paranoia -->
+        <section class="section section-accent" id="paranoia">
+            <div class="section-header reveal">
+                <span class="section-number">01</span>
+                <h2 class="section-title">No es paranoia — Está documentado</h2>
+                <p class="section-intro">Humanos escuchaban tu casa. Literalmente. En pasado, documentado y admitido por las propias empresas.</p>
+            </div>
+            <div class="data-grid">
+                <div class="data-card reveal">
+                    <h3>Apple — Siri</h3>
+                    <p>Contratistas oían «información médica confidencial, negocios de droga y grabaciones de parejas». Apple lo suspendió al publicarse — y en 2025 pagó 95&nbsp;M$ para cerrar la demanda colectiva.</p>
+                    <p class="source">The Guardian, 2019 · BBC, 2025 (D16)</p>
+                </div>
+                <div class="data-card reveal" style="--delay: 0.1s">
+                    <h3>Amazon — Alexa</h3>
+                    <p>Miles de empleados transcribían conversaciones: unos 1.000 clips por turno, con tu nombre y número de cuenta.</p>
+                    <p class="source">CNBC / Bloomberg, 2019 (D17)</p>
+                </div>
+                <div class="data-card reveal" style="--delay: 0.2s">
+                    <h3>Google — Google Home</h3>
+                    <p>Un contratista filtró más de 1.000 grabaciones; 153 se habían capturado por accidente, sin que nadie dijera «OK Google».</p>
+                    <p class="source">VRT NWS, 2019 (D17)</p>
+                </div>
+                <div class="data-card reveal" style="--delay: 0.3s">
+                    <h3>Y las brechas</h3>
+                    <p>Google+ expuso datos de hasta 500.000 cuentas y lo supo meses antes de decirlo. A Amazon le cayó una multa de 746&nbsp;M€ por usar datos para publicidad sin base legal — confirmada en firme en 2025.</p>
+                    <p class="source">Google, 2018 · CNPD Luxemburgo (D15)</p>
+                </div>
+            </div>
+            <div class="info-block reveal" style="--delay: 0.2s">
+                <h3>Los que más saben, apagan los altavoces</h3>
+                <p>Apagar los asistentes de voz en reuniones sensibles es política oficial en el Gobierno británico, en el parlamento irlandés, en un ministerio de India y en despachos de abogados como Mishcon de Reya.</p>
+                <p>¿Por qué? Porque el miedo tiene base técnica: los altavoces se activan por error entre 1,5 y 19 veces al día (estudio PETS 2020); la CIA y el MI5 construyeron una herramienta que convierte teles en micrófonos (<em>Weeping Angel</em>, 2017); y Samsung llegó a advertir en su propia política que no hablaras de cosas sensibles delante de su tele (2015).</p>
+                <p class="source">Fuente: Gobiernos UK/India, parlamento irlandés, Bloomberg, The Guardian, The Verge, Mon(IoT)r Lab (D23)</p>
+            </div>
+        </section>
+
+        <!-- 02 · Datos sin frontera -->
+        <section class="section" id="frontera">
+            <div class="section-header reveal">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Tus datos no tienen frontera</h2>
+                <p class="section-intro">La ley que sí te alcanza. «Servidor en Europa» no protege nada si la empresa es americana: una caja fuerte en Madrid cuya llave guarda un notario de Delaware.</p>
+            </div>
+            <div class="data-grid">
+                <div class="data-card reveal">
+                    <h3>La CLOUD Act (EEUU, 2018)</h3>
+                    <p>Obliga a cualquier empresa bajo jurisdicción americana a entregar datos de sus usuarios «estén donde estén almacenados» — incluidos los de no-estadounidenses. Es su propia ley, no una interpretación nuestra.</p>
+                    <p class="source">18 U.S.C. §2713 · FAQ oficial del DOJ (D13)</p>
+                </div>
+                <div class="data-card reveal" style="--delay: 0.1s">
+                    <h3>Los tribunales europeos ya lo dijeron</h3>
+                    <p>En 2020 el TJUE tumbó el Privacy Shield (sentencia <em>Schrems II</em>): la vigilancia americana no da protección equivalente al RGPD.</p>
+                    <p class="source">Tribunal de Justicia de la UE (D14)</p>
+                </div>
+                <div class="data-card reveal" style="--delay: 0.2s">
+                    <h3>Y tiene precio</h3>
+                    <p>A Meta le costó 1.200&nbsp;M€ — la mayor multa de la historia del RGPD — por seguir enviando datos europeos a EEUU.</p>
+                    <p class="source">Data Protection Commission de Irlanda, 2023 (D14)</p>
+                </div>
+                <div class="data-card reveal" style="--delay: 0.3s">
+                    <h3>Un ejemplo que te toca cerca: TaxDown</h3>
+                    <p>La app española para la declaración de la renta opera sobre Amazon Web Services y su propia política dice que «los datos pueden ser transferidos a Estados Unidos». Tus datos fiscales —sacados de la propia Hacienda— bajo jurisdicción del CLOUD Act. Y si EEUU los reclama, la ley permite prohibir a la empresa avisarte (<em>gag orders</em>, §2705(b)).</p>
+                    <p class="source">taxdown.es · help.taxdown.es · Cornell LII (D18)</p>
+                </div>
+            </div>
+            <div class="info-block reveal" style="--delay: 0.3s">
+                <p><strong>TaxDown no hace nada ilegal.</strong> El problema es que quien decide si entrega o no es Amazon. Ni TaxDown. Ni tú.</p>
+            </div>
+        </section>
+
+        <!-- 03 · Cuando el mercado manda -->
+        <section class="section" id="mercado">
+            <div class="section-header reveal">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Cuando el mercado manda</h2>
+                <p class="section-intro">Las plataformas obedecen. Patrón documentado con cuatro hechos, más el contexto de aquí.</p>
+            </div>
+            <div class="info-block reveal">
+                <h3>En China ni hace falta orden judicial</h3>
+                <p>La Ley de Inteligencia de 2017 obliga a «toda organización y ciudadano» a colaborar con los servicios del Estado. Cuando Alibaba informó de una vulnerabilidad crítica al mundo antes que a su gobierno, Pekín la suspendió 6 meses como socio de ciberseguridad.</p>
+                <p class="source">China Law Translate · BBC, 2021 (D19)</p>
+            </div>
+            <div class="data-grid">
+                <div class="data-card reveal">
+                    <h3>Google — Project Dragonfly (2018)</h3>
+                    <p>Construyó en secreto un buscador censurado para China.</p>
+                    <p class="source">The Intercept (D22)</p>
+                </div>
+                <div class="data-card reveal" style="--delay: 0.1s">
+                    <h3>Apple — HKmap (2019)</h3>
+                    <p>Retiró la app de mapas de las protestas de Hong Kong un día después de que la prensa del PCCh la criticara.</p>
+                    <p class="source">TechCrunch (D22)</p>
+                </div>
+                <div class="data-card reveal" style="--delay: 0.2s">
+                    <h3>Apple y Google — Navalny (2021)</h3>
+                    <p>Boraron la app de voto táctico el mismo día que abrían las elecciones rusas.</p>
+                    <p class="source">BBC (D22)</p>
+                </div>
+                <div class="data-card reveal" style="--delay: 0.3s">
+                    <h3>Meta — Vietnam (2020)</h3>
+                    <p>Vietnam dejó los servidores de Facebook fuera de línea 7 semanas hasta que aceptó censurar más contenido «anti-estado».</p>
+                    <p class="source">Reuters vía TechCrunch (D22)</p>
+                </div>
+            </div>
+            <div class="data-grid">
+                <div class="data-card reveal">
+                    <h3>Y aquí: la «ley mordaza»</h3>
+                    <p>Condenada por relatores de la ONU y Human Rights Watch por recortar expresión y reunión.</p>
+                    <p class="source">LO 4/2015 · ONU · HRW, 2015 (D20)</p>
+                </div>
+                <div class="data-card reveal" style="--delay: 0.1s">
+                    <h3>Más del 75&nbsp;% de la audiencia, en pocas manos</h3>
+                    <p>TV, radio y prensa concentradas en unas pocas manos — lo dice el observatorio europeo de pluralismo mediático, no una opinión.</p>
+                    <p class="source">Media Pluralism Monitor, MPM2025 (D21)</p>
+                </div>
+            </div>
+            <div class="info-block reveal" style="--delay: 0.2s">
+                <h3>Interludio — El «maletín de plutonio» de Madrid</h3>
+                <p>En Madrid ocurrió dos veces de verdad: un maletín radiactivo robado y abandonado junto a un colegio de Leganés (2008) y en una calle de Usera (2022). No era plutonio: era un medidor de obra de baja categoría. Pero la historia que se cuenta dice «plutonio junto a un colegio» — y suena verdad porque Madrid tiene pasado nuclear oculto de verdad.</p>
+                <p><strong>Así funciona la postverdad: un hecho real con el miedo subido de volumen. Por eso cada afirmación de esta presentación lleva su fuente.</strong></p>
+                <p class="source">El País, RTVE, TeleMadrid, El Español, 20minutos, ABC (D24)</p>
+            </div>
+        </section>
+
+        <!-- 04 · Qué es enola-cli -->
+        <section class="section section-accent" id="que-es">
+            <div class="section-header reveal">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Qué es enola-cli</h2>
+                <p class="section-intro">Tu ordenador, tu plaza pública. Sin tercero, no hay nada que requisar.</p>
+            </div>
+            <div class="data-grid">
+                <div class="data-card reveal">
+                    <h3>Todo escucha solo dentro de tu equipo</h3>
+                    <p>Ningún puerto abierto a internet, ninguna IP que geolocalizar.</p>
+                </div>
+                <div class="data-card reveal" style="--delay: 0.1s">
+                    <h3>La única puerta al exterior es una dirección .onion</h3>
+                    <p>Una calle que existe solo dentro de la red Tor: una capa de internet donde los servidores no tienen dirección física visible.</p>
+                </div>
+                <div class="data-card reveal" style="--delay: 0.2s">
+                    <h3>Un comando por servicio</h3>
+                    <p>No hace falta saber programar ni administrar servidores.</p>
+                </div>
+            </div>
+            <div class="info-block reveal" style="--delay: 0.2s">
+                <h3>La analogía</h3>
+                <p>Publicar en hosting es alquilar una habitación en el hotel de otro — llaves que copian, camareros que entran, un dueño al que pueden ordenar que te eche. enola es <strong>tu propia casa</strong>, con una dirección que no revela dónde está.</p>
+                <p><strong>Sin tercero, no hay nada que requisar.</strong></p>
+                <p>Honestidad inmediata: es tu PC — si lo apagas, el servicio descansa contigo.</p>
+            </div>
+        </section>
+
+        <!-- 05 · La promesa -->
+        <section class="section" id="promesa">
+            <div class="section-header reveal">
+                <span class="section-number">05</span>
+                <h2 class="section-title">La promesa</h2>
+                <p class="section-intro">Un PC. Un comando. Tu internet.</p>
+            </div>
+            <div class="objective-display reveal">
+                <div class="objective-amount">
+                    <span class="objective-currency">€</span>
+                    <span class="objective-number">0</span>
+                    <span style="font-size:2.4rem; vertical-align: baseline;">/mes</span>
+                </div>
+                <p class="objective-label">0 puertos abiertos · 1 comando por servicio · 0 empresas intermediarias</p>
+            </div>
+            <div class="data-grid">
+                <div class="data-card reveal">
+                    <h3>Un solo ordenador con Linux, el que ya tienes</h3>
+                    <table class="data-table full-width">
+                        <tr><td>Tu web personal</td><td>✔</td></tr>
+                        <tr><td>Tu blog</td><td>✔</td></tr>
+                        <tr><td>Tu git</td><td>✔</td></tr>
+                        <tr><td>Tus archivos</td><td>✔</td></tr>
+                        <tr><td>Tu VPN</td><td>✔</td></tr>
+                    </table>
+                    <p>Sin factura de hosting. Sin puertos que escanear. Sin empresa intermediaria.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 06 · Para quién -->
+        <section class="section" id="perfiles">
+            <div class="section-header reveal">
+                <span class="section-number">06</span>
+                <h2 class="section-title">Para quién</h2>
+                <p class="section-intro">Gente normal con motivos normales.</p>
+            </div>
+            <div class="motivation-grid">
+                <div class="motivation-card reveal"><div class="mot-icon">🎓</div><h3>La estudiante</h3><p>«Quiero enseñar mi app al mundo sin pagar un servidor ni abrir el router de casa de mis padres.»</p></div>
+                <div class="motivation-card reveal" style="--delay: 0.1s"><div class="mot-icon">✍️</div><h3>El bloguero</h3><p>«Quiero escribir sin que mi nombre, mi IP ni mis lectores queden en manos de una plataforma.»</p></div>
+                <div class="motivation-card reveal" style="--delay: 0.2s"><div class="mot-icon">🛡️</div><h3>La periodista o activista</h3><p>«Trabajo con información que a alguien le interesaría que desapareciera.»</p></div>
+                <div class="motivation-card reveal" style="--delay: 0.3s"><div class="mot-icon">⚖️</div><h3>El abogado o el médico</h3><p>«Necesito pasar documentos a mis clientes sin que viajen por los servidores de una tercera empresa.»</p></div>
+                <div class="motivation-card reveal" style="--delay: 0.4s"><div class="mot-icon">🏠</div><h3>La familia</h3><p>«Fotos y archivos de casa, accesibles desde fuera, sin suscripciones ni nubes ajenas.»</p></div>
+                <div class="motivation-card reveal" style="--delay: 0.5s"><div class="mot-icon">🎮</div><h3>El grupo de amigos</h3><p>«Un servidor de juegos nuestro, no alquilado.»</p></div>
+            </div>
+        </section>
+
+        <!-- 07 · Publicar sin pedir permiso -->
+        <section class="section" id="publicar">
+            <div class="section-header reveal">
+                <span class="section-number">07</span>
+                <h2 class="section-title">Caso real — Publicar sin pedir permiso</h2>
+                <p class="section-intro">El mismo mecanismo, dos urgencias: aprender e informar.</p>
+            </div>
+            <div class="info-block reveal">
+                <h3>El mecanismo, en llano</h3>
+                <p>Cualquier app que corre en tu PC —un proyecto en el puerto 3000, una web estática— sale a la red Tor como dirección .onion con un comando. Funciona aunque tu operador no te deje abrir puertos (CGNAT): el .onion solo usa conexiones salientes.</p>
+                <p class="source">D8</p>
+            </div>
+            <div class="data-grid">
+                <div class="data-card reveal">
+                    <h3>Para quien aprende</h3>
+                    <p>7 millones de estudiantes usan GitHub Education porque las herramientas reales «pueden ser prohibitivas por coste». Aquí el coste es cero — y el Git es tuyo: enola monta un Forgejo propio, un GitHub privado que no depende de GitHub.</p>
+                    <p class="source">education.github.com (D10)</p>
+                </div>
+                <div class="data-card reveal" style="--delay: 0.1s">
+                    <h3>Para quien escribe</h3>
+                    <p>WordPress — el software que ya mueve el 40&nbsp;% de todas las webs del mundo — es una de las plataformas que enola publica con un comando. Blog, revista o sitio completo.</p>
+                    <p class="source">W3Techs, oct-2026 (D5)</p>
+                </div>
+                <div class="data-card reveal" style="--delay: 0.2s">
+                    <h3>Para quien informa</h3>
+                    <p>Un servidor .onion no tiene IP pública: no hay dirección a la que mandar una orden de retirada, ni hosting al que presionar. Por eso <strong>SecureDrop</strong> —el sistema abierto de filtraciones anónimas que ya usan <strong>más de 70 organizaciones de noticias en todo el mundo</strong>— corre sobre la red Tor: «las fuentes y los periodistas se conectan a SecureDrop usando la red Tor», y su diseño busca «eliminar a los terceros de la ecuación». Y por eso RSF recomienda <strong>OnionShare</strong> a periodistas en regímenes autoritarios.</p>
+                    <p class="source">Freedom of the Press Foundation, 2021 · docs.securedrop.org (D6) · RSF (D7)</p>
+                </div>
+            </div>
+            <div class="info-block reveal" style="--delay: 0.2s">
+                <h3>La puerta con portero</h3>
+                <p>Puedes exigir llave de acceso —autorización por cliente— y tu servicio se vuelve invisible para cualquiera que no la tenga: ni siquiera conecta.</p>
+                <p>Contexto que lo hace urgente: 67 periodistas asesinados y 503 detenidos en doce meses.</p>
+                <p class="source">RSF, 2025 (D2)</p>
+                <p class="source">Matiz honesto: quien visite necesita Tor Browser.</p>
+            </div>
+        </section>
+
+        <!-- 08 · Compartir solo con quien eliges -->
+        <section class="section" id="compartir">
+            <div class="section-header reveal">
+                <span class="section-number">08</span>
+                <h2 class="section-title">Caso real — Compartir solo con quien tú eliges</h2>
+            </div>
+            <div class="info-block reveal">
+                <h3>La carpeta que solo ven los tuyos</h3>
+                <p><span class="onion">files</span> publica una carpeta de tu PC como .onion con autoindex —un listado web navegable— y con llave por persona. Solo conectan los invitados que autorizas; la invitación se revoca cuando quieras. Frente a Drive/Dropbox/WeTransfer: sin copia en servidores ajenos, sin metadata en manos de terceros — el mismo principio por el que SecureDrop «elimina a los terceros de la ecuación».</p>
+                <p class="source">D6, D7</p>
+            </div>
+            <div class="info-block reveal" style="--delay: 0.1s">
+                <h3>Tu «NAS» es el PC que ya tienes</h3>
+                <p>Fotos, documentos y vídeos de casa, accesibles desde fuera con llave para cada miembro de la familia — y para móviles o streaming, la VPN integrada (WireGuard) da el camino corto. El mercado de NAS doméstico factura ~4.200&nbsp;M$ y crece a un ritmo anual de entre el 8,5&nbsp;% y el 11,8&nbsp;%, empujado por la privacidad; enola cubre lo esencial con 0&nbsp;€ de hardware extra.</p>
+                <p class="source">Estimaciones de mercado (D9)</p>
+                <p>Honesto: no gestiona discos RAID ni transcodifica vídeo — comparte archivos, no milagros.</p>
+            </div>
+            <div class="info-block reveal" style="--delay: 0.2s">
+                <h3>Juegos entre amigos</h3>
+                <p>Un servidor propio para juegos por turnos o cooperativo casual (Minecraft es TCP: jugable entre amigos). La demanda es masiva — Aternos, el hosting gratuito de Minecraft, declara 125&nbsp;M de usuarios y 1&nbsp;M de jugadores al día según su web oficial.</p>
+                <p class="source">aternos.gmbh (D11)</p>
+                <p>Honesto: Tor solo lleva TCP y añade latencia; para tiempo real está la VPN WireGuard — mismo coste: cero.</p>
+            </div>
+        </section>
+
+        <!-- 09 · De qué es capaz -->
+        <section class="section section-accent" id="capaz">
+            <div class="section-header reveal">
+                <span class="section-number">09</span>
+                <h2 class="section-title">De qué es capaz</h2>
+                <p class="section-intro">La caja de herramientas, sin letra pequeña.</p>
+            </div>
+            <div class="tools-grid reveal">
+                <div class="tools-list">
+                    <div class="tool-item"><span class="tool-icon">🧅</span><div><strong>Servicios .onion</strong><br>Web, estático, archivos y TCP</div></div>
+                    <div class="tool-item"><span class="tool-icon">🌐</span><div><strong>6 plataformas</strong><br>WordPress, Drupal, Ghost, Magnolia, Strapi, Wagtail</div></div>
+                    <div class="tool-item"><span class="tool-icon">🐙</span><div><strong>Git propio (Forgejo)</strong><br>SSH sobre Tor, sin depender de GitHub</div></div>
+                    <div class="tool-item"><span class="tool-icon">📁</span><div><strong>Compartir archivos</strong><br>Llave por persona y TLS 1.3</div></div>
+                    <div class="tool-item"><span class="tool-icon">🔒</span><div><strong>VPN WireGuard</strong><br>Túneles entre dispositivos de confianza</div></div>
+                    <div class="tool-item"><span class="tool-icon">🛡️</span><div><strong>Blindaje incluido</strong><br>Cortafuegos UFW + AppArmor</div></div>
+                    <div class="tool-item"><span class="tool-icon">✍️</span><div><strong>Releases con doble firma</strong><br>Verificables sin conexión</div></div>
+                    <div class="tool-item"><span class="tool-icon">📚</span><div><strong>Documentación integrada</strong><br><span class="onion">enola-cli docs</span> — funciona sin internet</div></div>
+                </div>
+            </div>
+            <div class="info-block reveal" style="--delay: 0.2s">
+                <h3>La comparativa honesta</h3>
+                <p>Qué hace cada opción, qué cuesta, qué expone:</p>
+                <table class="data-table full-width">
+                    <thead><tr><th>Opción</th><th>Coste</th><th>¿IP pública visible?</th><th>¿Dependes de un tercero?</th></tr></thead>
+                    <tbody>
+                        <tr><td>VPS alquilado</td><td>~4–6&nbsp;€/mes</td><td>Sí, por diseño</td><td>Sí: el proveedor</td></tr>
+                        <tr><td>Hosting «gratis»</td><td>Tus datos / ads</td><td>Sí</td><td>Total</td></tr>
+                        <tr><td>OnionShare</td><td>0&nbsp;€</td><td>No</td><td>No</td></tr>
+                        <tr><td>NAS comercial</td><td>Hardware + consumo</td><td>Depende</td><td>Sí (su nube) o router</td></tr>
+                        <tr><td><strong>enola-cli</strong></td><td><strong>0&nbsp;€</strong></td><td><strong>No — solo .onion</strong></td><td><strong>No</strong></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 10 · Lo que no hace -->
+        <section class="section" id="limites">
+            <div class="section-header reveal">
+                <span class="section-number">10</span>
+                <h2 class="section-title">Lo que no hace</h2>
+                <p class="section-intro">Las letras pequeñas, en grande. Esta sección da credibilidad a todas las demás.</p>
+            </div>
+            <div class="risks-grid">
+                <div class="risk-card reveal"><div class="risk-indicators"><span class="risk-dot risk-high"></span></div><h3>Es Tor: es lento por diseño</h3><p>Los datos dan seis saltos cifrados. Perfecto para webs, blogs y archivos; no para streaming pesado ni juegos de reflejos — para eso está la VPN incluida.</p></div>
+                <div class="risk-card reveal" style="--delay: 0.1s"><div class="risk-indicators"><span class="risk-dot risk-medium"></span></div><h3>Solo TCP</h3><p>Los juegos en tiempo real que usan UDP no pasan por Tor. Por turnos o cooperativo tranquilo → .onion; competición en directo → VPN.</p></div>
+                <div class="risk-card reveal" style="--delay: 0.2s"><div class="risk-indicators"><span class="risk-dot risk-medium"></span></div><h3>Tus visitas necesitan Tor Browser</h3><p>Es una app gratuita de dos clics, pero es una fricción real: esta no es la herramienta para audiencias masivas ni SEO.</p></div>
+                <div class="risk-card reveal" style="--delay: 0.3s"><div class="risk-indicators"><span class="risk-dot risk-high"></span></div><h3>Donde Tor está bloqueado, esto no basta</h3><p>En China, Irán o Rusia se necesitan puentes especiales — y a veces ni eso. Una herramienta no sustituye ni al sentido común ni a la protección legal.</p><p class="source">D12</p></div>
+                <div class="risk-card reveal" style="--delay: 0.4s"><div class="risk-indicators"><span class="risk-dot risk-medium"></span></div><h3>No promete anonimato absoluto</h3><p>Promete privacidad y resistencia a la censura por diseño; la seguridad completa depende también de tus hábitos.</p></div>
+                <div class="risk-card reveal" style="--delay: 0.5s"><div class="risk-indicators"><span class="risk-dot risk-low"></span></div><h3>Es tu PC</h3><p>Si lo apagas, tu rincón de internet se apaga contigo. No hay datacenter que lo mantenga en pie por ti.</p></div>
+            </div>
+        </section>
+
+        <!-- 11 · Empieza hoy -->
+        <section class="section section-dark" id="empieza">
+            <div class="section-header reveal">
+                <span class="section-number">11</span>
+                <h2 class="section-title">Empieza hoy</h2>
+                <p class="section-intro">Cuatro pasos.</p>
+            </div>
+            <div class="timeline reveal">
+                <div class="timeline-line"></div>
+                <div class="timeline-phase" data-phase="0">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>Instala</h4>
+                        <span class="timeline-period">Paso 1</span>
+                        <p>Un script, un minuto.</p>
+                    </div>
+                </div>
+                <div class="timeline-phase" data-phase="1">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>setup</h4>
+                        <span class="timeline-period">Paso 2</span>
+                        <p>Deja el sistema listo: Tor, Docker, cortafuegos.</p>
+                    </div>
+                </div>
+                <div class="timeline-phase" data-phase="2">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>doctor</h4>
+                        <span class="timeline-period">Paso 3</span>
+                        <p>Comprueba que todo está en orden.</p>
+                    </div>
+                </div>
+                <div class="timeline-phase" data-phase="3">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>Publica</h4>
+                        <span class="timeline-period">Paso 4</span>
+                        <p>Tu primer .onion: una web, una carpeta, tu proyecto.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="info-block reveal" style="--delay: 0.2s">
+                <p><strong>Y verifica antes de confiar:</strong> cada release va firmado dos veces (minisign + firma post-cuántica) y se comprueba sin conexión — <span class="onion">enola-cli verify</span>. No tienes que creernos: puedes comprobarlo.</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer reveal">
+            <div class="footer-content">
+                <div class="footer-logo">enola-cli-lite</div>
+                <p>github.com/SalvadorPalmaRodriguez/enola-cli-lite</p>
+                <p><img src="assets/qr-github.svg" alt="QR al repositorio enola-cli-lite" width="120" height="120" style="margin: 12px 0; background:#fff; border-radius:8px; padding:8px;"></p>
+                <p class="footer-quote">"Tu infraestructura. Tus reglas. Nadie mirando."</p>
+                <p class="source" style="color: var(--enola-white); opacity: 0.7;">Cada cifra de esta presentación tiene su fuente — ver <a href="documento-apoyo.html">documento-apoyo</a>.</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Presentation mode overlay -->
+    <div class="present-controls" id="presentControls">
+        <button class="present-btn" id="prevSection" title="Anterior (←)">‹</button>
+        <span class="present-counter" id="presentCounter">1 / 13</span>
+        <button class="present-btn" id="nextSection" title="Siguiente (→)">›</button>
+        <button class="present-btn present-exit" id="exitPresent" title="Salir (Esc)">✕</button>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
